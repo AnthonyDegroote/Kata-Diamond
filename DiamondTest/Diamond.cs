@@ -44,7 +44,7 @@ internal static class Diamond
 
         for (int i = 0; i < (v - 'A'); i++)
         {
-            string space;
+            string space = "";
             if (v == 'E')
             {
                 space = "     ";
@@ -52,6 +52,10 @@ internal static class Diamond
             else if (v == 'F')
             {
                 space = "       ";
+            }
+            else if (v == 'G')
+            {
+                space = "         ";
             }
             else
             {
@@ -72,6 +76,10 @@ internal static class Diamond
             else if (v == 'F')
             {
                 space = "       ";
+            }
+            else if (v == 'G')
+            {
+                space = "         ";
             }
             else
             {
