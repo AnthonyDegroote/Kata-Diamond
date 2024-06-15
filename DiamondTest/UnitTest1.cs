@@ -2,6 +2,19 @@ namespace DiamondTest;
 
 public class UnitTest1
 {
+    [Theory]
+    // Arrange
+    [InlineData('E', "E       E")]
+    public void TestLineMax(char c, string exceptedLineMax)
+    {
+        // Act
+        string actual = Diamond.Print(c);
+
+        // Assert
+        var lines = actual.Split("\r\n");
+        Assert.Equal(exceptedLineMax, lines.MaxBy(line => line.Length));
+    }
+
     [Fact]
     public void TestB()
     {
