@@ -5,7 +5,12 @@ public class UnitTest1
     [Theory]
     // Arrange
     [InlineData('A', "A")]
+    [InlineData('B', "B B")]
+    [InlineData('C', "C   C")]
+    [InlineData('D', "D     D")]
     [InlineData('E', "E       E")]
+    [InlineData('F', "F         F")]
+    [InlineData('G', "G           G")]
     public void TestLineMax(char c, string exceptedLineMax)
     {
         // Act
