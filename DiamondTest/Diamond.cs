@@ -44,51 +44,39 @@ internal static class Diamond
 
         for (int i = 0; i < (v - 'A'); i++)
         {
-            string space = "";
-            if (v == 'E')
-            {
-                space = "     ";
-            }
-            else if (v == 'F')
-            {
-                space = "       ";
-            }
-            else if (v == 'G')
-            {
-                space = "         ";
-            }
-            else
-            {
-                space = "";
-            }
-            stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
+            NewMethod(v, stringBuilder, i);
         }
 
         PrintMiddleLine(v, stringBuilder);
 
         for (int i = (v - 'A'); i > 0; i--)
         {
-            string space = "";
-            if (v == 'E')
-            {
-                space = "     ";
-            }
-            else if (v == 'F')
-            {
-                space = "       ";
-            }
-            else if (v == 'G')
-            {
-                space = "         ";
-            }
-            else
-            {
-                space = "";
-            }
-            stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
+            NewMethod(v, stringBuilder, i);
         }
 
         return stringBuilder.ToString();
+    }
+
+    private static void NewMethod(char v, StringBuilder stringBuilder, int i)
+    {
+        string space = "";
+        if (v == 'E')
+        {
+            space = "     ";
+        }
+        else if (v == 'F')
+        {
+            space = "       ";
+        }
+        else if (v == 'G')
+        {
+            space = "         ";
+        }
+        else
+        {
+            space = "";
+        }
+        stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
     }
 
     private static void PrintMiddleLine(char v, StringBuilder stringBuilder)
