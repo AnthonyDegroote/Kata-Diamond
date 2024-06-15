@@ -5,6 +5,8 @@ public class UnitTest1
     [Theory(DisplayName = "TestLineCount")]
     // Arrange
     [InlineData('E', 9)]
+    [InlineData('F', 11)]
+    [InlineData('G', 13)]
     public void TestLineCount(char c, int exceptedLineCount)
     {
         // Act
