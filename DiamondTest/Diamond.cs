@@ -42,6 +42,13 @@ internal static class Diamond
             return stringBuilder.ToString();
         }
 
+        PrintMiddleLine(v, stringBuilder);
+
+        return stringBuilder.ToString();
+    }
+
+    private static void PrintMiddleLine(char v, StringBuilder stringBuilder)
+    {
         if (v == 'A')
         {
             stringBuilder.Append(v);
@@ -56,7 +63,5 @@ internal static class Diamond
             stringBuilder.Append(v);
         }
         stringBuilder.AppendLine();
-
-        return stringBuilder.ToString();
     }
 }
