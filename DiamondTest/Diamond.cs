@@ -12,7 +12,7 @@ internal static class Diamond
         if (v == 'B')
         {
             stringBuilder.AppendLine(" A ".TrimEnd());
-            stringBuilder.AppendLine("B B".TrimEnd());
+            PrintMiddleLine(v, stringBuilder);
             stringBuilder.Append(" A ".TrimEnd());
 
             return stringBuilder.ToString();
@@ -22,7 +22,7 @@ internal static class Diamond
         {
             stringBuilder.AppendLine("  A  ".TrimEnd());
             stringBuilder.AppendLine(" B B ".TrimEnd());
-            stringBuilder.AppendLine("C   C".TrimEnd());
+            PrintMiddleLine(v, stringBuilder);
             stringBuilder.AppendLine(" B B ".TrimEnd());
             stringBuilder.Append("  A  ".TrimEnd());
 
@@ -34,7 +34,7 @@ internal static class Diamond
             stringBuilder.AppendLine("   A   ".TrimEnd());
             stringBuilder.AppendLine("  B B  ".TrimEnd());
             stringBuilder.AppendLine(" C   C ".TrimEnd());
-            stringBuilder.AppendLine("D     D".TrimEnd());
+            PrintMiddleLine(v, stringBuilder);
             stringBuilder.AppendLine(" C   C ".TrimEnd());
             stringBuilder.AppendLine("  B B  ".TrimEnd());
             stringBuilder.Append("   A   ".TrimEnd());
