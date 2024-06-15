@@ -4,6 +4,9 @@ public class UnitTest1
 {
     [Theory(DisplayName = "TestLineMiddleIndex")]
     // Arrange
+    [InlineData('B', " A")]
+    [InlineData('C', " B B")]
+    [InlineData('D', " C   C")]
     [InlineData('E', " D     D")]
     public void TestLineMiddleIndex(char c, string exceptedLineMax)
     {
