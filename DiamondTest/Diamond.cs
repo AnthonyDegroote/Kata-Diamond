@@ -44,7 +44,19 @@ internal static class Diamond
 
         for (int i = 0; i < (v - 'A'); i++)
         {
-            string space = "     ";
+            string space;
+            if (v == 'E')
+            {
+                space = "     ";
+            }
+            else if (v == 'F')
+            {
+                space = "       ";
+            }
+            else
+            {
+                space = "";
+            }
             stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
         }
 
@@ -52,7 +64,19 @@ internal static class Diamond
 
         for (int i = (v - 'A'); i > 0; i--)
         {
-            string space = "     ";
+            string space = "";
+            if (v == 'E')
+            {
+                space = "     ";
+            }
+            else if (v == 'F')
+            {
+                space = "       ";
+            }
+            else
+            {
+                space = "";
+            }
             stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
         }
 

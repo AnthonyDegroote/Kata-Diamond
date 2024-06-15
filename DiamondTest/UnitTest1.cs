@@ -8,6 +8,7 @@ public class UnitTest1
     [InlineData('C', " B B")]
     [InlineData('D', " C   C")]
     [InlineData('E', " D     D")]
+    [InlineData('F', " E       E")]
     public void TestLineMiddleIndex(char c, string exceptedLineMax)
     {
         // Act
