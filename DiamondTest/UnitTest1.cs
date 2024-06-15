@@ -20,7 +20,6 @@ public class UnitTest1
         Assert.Equal(expected, actual);
     }
 
-
     [Fact]
     public void TestC()
     {
