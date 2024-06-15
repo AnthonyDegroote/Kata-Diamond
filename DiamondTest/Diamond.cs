@@ -42,7 +42,17 @@ internal static class Diamond
             return stringBuilder.ToString();
         }
 
+        for (int i = 0; i < (v - 'A'); i++)
+        {
+            stringBuilder.AppendLine();
+        }
+
         PrintMiddleLine(v, stringBuilder);
+
+        for (int i = (v - 'A'); i > 0; i--)
+        {
+            stringBuilder.AppendLine();
+        }
 
         return stringBuilder.ToString();
     }

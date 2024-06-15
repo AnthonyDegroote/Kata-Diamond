@@ -2,7 +2,23 @@ namespace DiamondTest;
 
 public class UnitTest1
 {
-    [Theory]
+    [Theory(DisplayName = "TestLineCount")]
+    // Arrange
+    [InlineData('E', 9)]
+    public void TestLineCount(char c, int exceptedLineCount)
+    {
+        // Act
+        string actual = Diamond.Print(c);
+
+        // Assert
+        var lines = actual.Split("\r\n")
+            .Where(string.IsNullOrEmpty)
+            .ToArray();
+        Assert.Equal(exceptedLineCount, lines.Length);
+    }
+
+
+    [Theory(DisplayName = "TestLineMax")]
     // Arrange
     [InlineData('A', "A")]
     [InlineData('B', "B B")]
@@ -21,7 +37,7 @@ public class UnitTest1
         Assert.Equal(exceptedLineMax, lines.MaxBy(line => line.Length));
     }
 
-    [Fact]
+    [Fact(DisplayName = "TestB")]
     public void TestB()
     {
         // Arrange
@@ -39,7 +55,7 @@ public class UnitTest1
         Assert.Equal(expected, actual);
     }
 
-    [Fact]
+    [Fact(DisplayName = "TestC")]
     public void TestC()
     {
         // Arrange
@@ -59,7 +75,7 @@ public class UnitTest1
         Assert.Equal(expected, actual);
     }
 
-    [Fact]
+    [Fact(DisplayName = "TestD")]
     public void TestD()
     {
         // Arrange
