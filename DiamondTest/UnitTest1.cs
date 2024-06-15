@@ -21,4 +21,26 @@ public class UnitTest1
         // Assert
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestD()
+    {
+        // Arrange
+        string expected =
+            """
+               A
+              B B
+             C   C
+            D     D
+             C   C
+              B B
+               A
+            """;
+
+        // Act
+        string actual = Diamond.Print('D');
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
 }
