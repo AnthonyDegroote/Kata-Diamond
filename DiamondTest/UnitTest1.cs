@@ -16,7 +16,7 @@ public class UnitTest1
         string actual = Diamond.Print(c);
 
         // Assert
-        var lines = actual.Split("\r\n")
+        var lines = actual.Split(Environment.NewLine)
             .Where(line => !string.IsNullOrEmpty(line))
             .ToArray();
         Assert.Equal(exceptedLineMax, lines[(lines.Length/2)-1]);
@@ -35,9 +35,8 @@ public class UnitTest1
     {
         // Act
         string actual = Diamond.Print(c);
-
         // Assert
-        var lines = actual.Split("\r\n")
+        var lines = actual.Split(Environment.NewLine)
             .Where(line => !string.IsNullOrEmpty(line))
             .ToArray();
         Assert.Equal(exceptedLineCount, lines.Length);
@@ -58,7 +57,7 @@ public class UnitTest1
         string actual = Diamond.Print(c);
 
         // Assert
-        var lines = actual.Split("\r\n");
+        var lines = actual.Split(Environment.NewLine);
         Assert.Equal(exceptedLineMax, lines.MaxBy(line => line.Length));
     }
 
