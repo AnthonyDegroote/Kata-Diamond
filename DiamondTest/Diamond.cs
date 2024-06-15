@@ -10,6 +10,16 @@ internal static class Diamond
     {
         StringBuilder stringBuilder = new();
 
+        if (v == 'B')
+        {
+            stringBuilder.AppendLine(" A ".TrimEnd());
+            stringBuilder.AppendLine("B B".TrimEnd());
+            stringBuilder.Append(" A ".TrimEnd());
+
+            return stringBuilder.ToString();
+        }
+
+
         if (v == 'D')
         {
             stringBuilder.AppendLine("   A   ".TrimEnd());

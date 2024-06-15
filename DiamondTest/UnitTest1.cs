@@ -3,6 +3,25 @@ namespace DiamondTest;
 public class UnitTest1
 {
     [Fact]
+    public void TestB()
+    {
+        // Arrange
+        string expected =
+            """
+             A
+            B B
+             A
+            """;
+
+        // Act
+        string actual = Diamond.Print('B');
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+
+    [Fact]
     public void TestC()
     {
         // Arrange
