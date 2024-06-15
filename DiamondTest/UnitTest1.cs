@@ -4,6 +4,10 @@ public class UnitTest1
 {
     [Theory(DisplayName = "TestLineCount")]
     // Arrange
+    [InlineData('A', 1)]
+    [InlineData('B', 3)]
+    [InlineData('C', 5)]
+    [InlineData('D', 7)]
     [InlineData('E', 9)]
     [InlineData('F', 11)]
     [InlineData('G', 13)]
@@ -14,7 +18,7 @@ public class UnitTest1
 
         // Assert
         var lines = actual.Split("\r\n")
-            .Where(string.IsNullOrEmpty)
+            .Where(line => !string.IsNullOrEmpty(line))
             .ToArray();
         Assert.Equal(exceptedLineCount, lines.Length);
     }
