@@ -23,7 +23,6 @@ public class UnitTest1
         Assert.Equal(exceptedLineCount, lines.Length);
     }
 
-
     [Theory(DisplayName = "TestLineMax")]
     // Arrange
     [InlineData('A', "A")]
