@@ -4,6 +4,7 @@ public class UnitTest1
 {
     [Theory]
     // Arrange
+    [InlineData('A', "A")]
     [InlineData('E', "E       E")]
     public void TestLineMax(char c, string exceptedLineMax)
     {
