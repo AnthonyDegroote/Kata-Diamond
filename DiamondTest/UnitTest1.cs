@@ -2,6 +2,21 @@ namespace DiamondTest;
 
 public class UnitTest1
 {
+    [Theory(DisplayName = "TestLineMiddleIndex")]
+    // Arrange
+    [InlineData('E', " D     D")]
+    public void TestLineMiddleIndex(char c, string exceptedLineMax)
+    {
+        // Act
+        string actual = Diamond.Print(c);
+
+        // Assert
+        var lines = actual.Split("\r\n")
+            .Where(line => !string.IsNullOrEmpty(line))
+            .ToArray();
+        Assert.Equal(exceptedLineMax, lines[(lines.Length/2)-1]);
+    }
+
     [Theory(DisplayName = "TestLineCount")]
     // Arrange
     [InlineData('A', 1)]

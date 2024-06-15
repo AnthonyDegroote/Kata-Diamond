@@ -44,14 +44,16 @@ internal static class Diamond
 
         for (int i = 0; i < (v - 'A'); i++)
         {
-            stringBuilder.AppendLine("XXX");
+            string space = "     ";
+            stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
         }
 
         PrintMiddleLine(v, stringBuilder);
 
         for (int i = (v - 'A'); i > 0; i--)
         {
-            stringBuilder.AppendLine("XXX");
+            string space = "     ";
+            stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
         }
 
         return stringBuilder.ToString();
