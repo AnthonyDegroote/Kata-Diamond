@@ -4,24 +4,26 @@ namespace KataDiamond;
 
 public static class Diamond
 {
-    public static string Print(char v)
+    public static string Print(char letter)
     {
+        char maxLetter = (char)(letter - 'A');
+
         StringBuilder stringBuilder = new();
 
-        for (int i = 0; i < (v - 'A'); i++)
+        for (int i = 0; i < maxLetter; i++)
         {
-            stringBuilder.AppendLine(NewMethod(v, i));
+            stringBuilder.AppendLine(NewMethod(letter, i));
         }
 
-        for (int i = (v - 'A'); i >= 0; i--)
+        for (int i = maxLetter; i >= 0; i--)
         {
             if (i == 0)
             {
-                stringBuilder.Append(NewMethod(v, i));
+                stringBuilder.Append(NewMethod(letter, i));
             }
             else
             {
-                stringBuilder.AppendLine(NewMethod(v, i));
+                stringBuilder.AppendLine(NewMethod(letter, i));
             }
         }
 
