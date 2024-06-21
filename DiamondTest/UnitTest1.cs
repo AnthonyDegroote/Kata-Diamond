@@ -24,7 +24,7 @@ public class UnitTest1
 
     [Theory(DisplayName = "TestLineMiddleIndexTwo")]
     // Arrange
-    [InlineData('E', 2,  "  C     C")]        // EDCBABCDE
+    [InlineData('E', 2,   "  C     C")]       // EDCBABCDE
     [InlineData('F', 2,  "  D       D")]     // FEDCBABCDEF
     [InlineData('G', 2, "  E         E")]   // GFEDCBABCDEFG
     public void TestLineMiddleIndexTwo(char c, uint indexOfMiddle, string exceptedLineMax)
