@@ -59,6 +59,8 @@ internal static class Diamond
 
     private static void NewMethod(char v, StringBuilder stringBuilder, int i)
     {
+        char printLetter = (char)('A' + i);
+
         uint numberSpace;
         if (v == 'E')
         {
@@ -77,7 +79,7 @@ internal static class Diamond
             numberSpace = 0;
         }
 
-        stringBuilder.AppendLine($"{PrintSpace(1)}{(char)('A' + i)}{PrintSpace(numberSpace)}{(char)('A' + i)}");
+        stringBuilder.AppendLine($"{PrintSpace(1)}{printLetter}{PrintSpace(numberSpace)}{printLetter}");
     }
 
     private static string PrintSpace(uint numberSpace)
