@@ -4,6 +4,66 @@ namespace KataDiamondTest;
 
 public class UnitTest1
 {
+    [Fact(DisplayName = "TestB")]
+    public void TestB()
+    {
+        // Arrange
+        string expected =
+            """
+             A
+            B B
+             A
+            """;
+
+        // Act
+        string actual = Diamond.Print('B');
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact(DisplayName = "TestC")]
+    public void TestC()
+    {
+        // Arrange
+        string expected =
+            """
+              A
+             B B
+            C   C
+             B B
+              A
+            """;
+
+        // Act
+        string actual = Diamond.Print('C');
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact(DisplayName = "TestD")]
+    public void TestD()
+    {
+        // Arrange
+        string expected =
+            """
+               A
+              B B
+             C   C
+            D     D
+             C   C
+              B B
+               A
+            """;
+
+        // Act
+        string actual = Diamond.Print('D');
+
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
     [Theory(DisplayName = "TestLineMiddleIndex")]
     // Arrange
     // BAB
@@ -91,65 +151,5 @@ public class UnitTest1
             .Select(line => line.Trim())
             .ToArray();
         Assert.Equal(exceptedLineMax, lines.MaxBy(line => line.Length));
-    }
-
-    [Fact(DisplayName = "TestB")]
-    public void TestB()
-    {
-        // Arrange
-        string expected =
-            """
-             A
-            B B
-             A
-            """;
-
-        // Act
-        string actual = Diamond.Print('B');
-
-        // Assert
-        Assert.Equal(expected, actual);
-    }
-
-    [Fact(DisplayName = "TestC")]
-    public void TestC()
-    {
-        // Arrange
-        string expected =
-            """
-              A
-             B B
-            C   C
-             B B
-              A
-            """;
-
-        // Act
-        string actual = Diamond.Print('C');
-
-        // Assert
-        Assert.Equal(expected, actual);
-    }
-
-    [Fact(DisplayName = "TestD")]
-    public void TestD()
-    {
-        // Arrange
-        string expected =
-            """
-               A
-              B B
-             C   C
-            D     D
-             C   C
-              B B
-               A
-            """;
-
-        // Act
-        string actual = Diamond.Print('D');
-
-        // Assert
-        Assert.Equal(expected, actual);
     }
 }
