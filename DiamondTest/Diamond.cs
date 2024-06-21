@@ -129,30 +129,13 @@ internal static class Diamond
     private static uint NumberSpaceMiddle(char printLetter)
     {
         uint numberSpaceMiddle = 0;
-
-        if (printLetter == 'F')
-        {
-            numberSpaceMiddle = 9;
-        }
-        else if (printLetter == 'E')
-        {
-            numberSpaceMiddle = 7;
-        }
-        else if (printLetter == 'D')
-        {
-            numberSpaceMiddle = 5;
-        }
-        else if (printLetter == 'C')
-        {
-            numberSpaceMiddle = 3;
-        }
-        else if (printLetter == 'B')
+        if (printLetter >= 'B')
         {
             numberSpaceMiddle = 1;
-        }
-        else if (printLetter == 'A')
-        {
-            numberSpaceMiddle = 0;
+            for (char i = 'C'; i <= printLetter; i++)
+            {
+                numberSpaceMiddle += 2;
+            }
         }
 
         return numberSpaceMiddle;
