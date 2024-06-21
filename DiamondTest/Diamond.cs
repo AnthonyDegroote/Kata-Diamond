@@ -77,9 +77,7 @@ internal static class Diamond
             numberSpace = 0;
         }
 
-        string space = PrintSpace(numberSpace);
-
-        stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
+        stringBuilder.AppendLine($"{PrintSpace(1)}{(char)('A' + i)}{PrintSpace(numberSpace)}{(char)('A' + i)}");
     }
 
     private static string PrintSpace(uint numberSpace)
