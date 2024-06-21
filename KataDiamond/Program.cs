@@ -1,15 +1,20 @@
 ﻿
 using KataDiamond;
+const int sleepTime = 200;
 
-for (char letter = 'A'; letter < 'Z'; letter++)
+do
 {
-    Console.WriteLine(Diamond.Print(letter));
-    Thread.Sleep(1000);
-    Console.Clear();
+    for (char letter = 'A'; letter < 'Z'; letter++)
+    {
+        Console.WriteLine(Diamond.Print(letter));
+        Thread.Sleep(sleepTime);
+        Console.Clear();
+    }
+    for (char letter = 'Z'; letter >= 'B'; letter--)
+    {
+        Console.WriteLine(Diamond.Print(letter));
+        Thread.Sleep(sleepTime);
+        Console.Clear();
+    }
 }
-for (char letter = 'Z'; letter >= 'A'; letter--)
-{
-    Console.WriteLine(Diamond.Print(letter));
-    Thread.Sleep(1000);
-    Console.Clear();
-}
+while (true);
