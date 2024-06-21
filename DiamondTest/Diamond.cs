@@ -62,63 +62,85 @@ internal static class Diamond
         char printLetter = (char)('A' + i);
 
         uint numberSpaceMiddle = 0;
+
+        if (printLetter == 'F')
+        {
+            numberSpaceMiddle = 9;
+        }
+        else if(printLetter == 'E')
+        {
+            numberSpaceMiddle = 7;
+        }
+        else if (printLetter == 'D')
+        {
+            numberSpaceMiddle = 5;
+        }
+        else if (printLetter == 'C')
+        {
+            numberSpaceMiddle = 3;
+        }
+        else if (printLetter == 'B')
+        {
+            numberSpaceMiddle = 1;
+        }
+        else if (printLetter == 'A')
+        {
+            numberSpaceMiddle = 0;
+        }
+
         uint numberSpaceFirst = 1;
 
         if (v == 'E')
         {
-            numberSpaceMiddle = 5;
+            if (printLetter == 'D')
+            {
+                numberSpaceFirst = 1;
+            }
             if (printLetter == 'C')
             {
-                numberSpaceMiddle = 3;
                 numberSpaceFirst = 2;
             }
             else if (printLetter == 'B')
             {
-                numberSpaceMiddle = 1;
                 numberSpaceFirst = 3;
             }
             else if (printLetter == 'A')
             {
-                numberSpaceMiddle = 0;
                 numberSpaceFirst = 4;
             }
         }
         else if (v == 'F')
         {
-            numberSpaceMiddle = 7;
+            if (printLetter == 'E')
+            {
+                numberSpaceFirst = 1;
+            }
             if (printLetter == 'D')
             {
-                numberSpaceMiddle = 5;
                 numberSpaceFirst = 2;
             }
             else if (printLetter == 'C')
             {
-                numberSpaceMiddle = 3;
                 numberSpaceFirst = 3;
             }
             else if (printLetter == 'B')
             {
-                numberSpaceMiddle = 1;
                 numberSpaceFirst = 4;
             }
             else if (printLetter == 'A')
             {
-                numberSpaceMiddle = 0;
                 numberSpaceFirst = 5;
             }
         }
         else if (v == 'G')
         {
-            numberSpaceMiddle = 9;
             if (printLetter == 'E')
             {
-                numberSpaceMiddle = 7;
                 numberSpaceFirst = 2;
             }
         }
         else
         {
-            numberSpaceMiddle = 0;
             numberSpaceFirst = 0;
         }
 
