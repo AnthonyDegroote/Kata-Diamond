@@ -1,9 +1,15 @@
 ﻿
 using KataDiamond;
 
-for (char c = 'A'; c <= 'Z'; c++)
+for (char letter = 'A'; letter < 'Z'; letter++)
 {
-    Console.WriteLine(Diamond.Print(c));
-    Thread.Sleep(5000);
+    Console.WriteLine(Diamond.Print(letter));
+    Thread.Sleep(1000);
+    Console.Clear();
+}
+for (char letter = 'Z'; letter >= 'A'; letter--)
+{
+    Console.WriteLine(Diamond.Print(letter));
+    Thread.Sleep(1000);
     Console.Clear();
 }
