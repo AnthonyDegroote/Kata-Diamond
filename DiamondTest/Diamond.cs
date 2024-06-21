@@ -75,6 +75,10 @@ internal static class Diamond
         else if (v == 'F')
         {
             numberSpaceMiddle = 7;
+            if (printLetter == 'D')
+            {
+                numberSpaceFirst = 2;
+            }
         }
         else if (v == 'G')
         {
