@@ -1,11 +1,10 @@
-﻿
-using System.Text;
+﻿using System.Text;
 
-namespace DiamondTest;
+namespace KataDiamond;
 
-internal static class Diamond
+public static class Diamond
 {
-    internal static string Print(char v)
+    public static string Print(char v)
     {
         StringBuilder stringBuilder = new();
 
@@ -62,62 +61,7 @@ internal static class Diamond
         char printLetter = (char)('A' + i);
 
         uint numberSpaceMiddle = NumberSpaceMiddle(printLetter);
-
-        uint numberSpaceFirst = 1;
-
-        if (v == 'E')
-        {
-            if (printLetter == 'D')
-            {
-                numberSpaceFirst = 1;
-            }
-            if (printLetter == 'C')
-            {
-                numberSpaceFirst = 2;
-            }
-            else if (printLetter == 'B')
-            {
-                numberSpaceFirst = 3;
-            }
-            else if (printLetter == 'A')
-            {
-                numberSpaceFirst = 4;
-            }
-        }
-        else if (v == 'F')
-        {
-            if (printLetter == 'E')
-            {
-                numberSpaceFirst = 1;
-            }
-            if (printLetter == 'D')
-            {
-                numberSpaceFirst = 2;
-            }
-            else if (printLetter == 'C')
-            {
-                numberSpaceFirst = 3;
-            }
-            else if (printLetter == 'B')
-            {
-                numberSpaceFirst = 4;
-            }
-            else if (printLetter == 'A')
-            {
-                numberSpaceFirst = 5;
-            }
-        }
-        else if (v == 'G')
-        {
-            if (printLetter == 'E')
-            {
-                numberSpaceFirst = 2;
-            }
-        }
-        else
-        {
-            numberSpaceFirst = 0;
-        }
+        uint numberSpaceFirst = (uint)(v - printLetter);
 
         if (numberSpaceMiddle == 0)
         {

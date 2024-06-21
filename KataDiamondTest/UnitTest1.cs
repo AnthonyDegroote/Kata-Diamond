@@ -1,4 +1,6 @@
-namespace DiamondTest;
+using KataDiamond;
+
+namespace KataDiamondTest;
 
 public class UnitTest1
 {
