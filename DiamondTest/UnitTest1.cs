@@ -25,7 +25,7 @@ public class UnitTest1
     [Theory(DisplayName = "TestLineMiddleIndexTwo")]
     // Arrange
     // EDCBABCDE
-    //[InlineData('E', 3, "    A")]
+    [InlineData('E', 4, "    A")]
     [InlineData('E', 3, "   B B")]
     [InlineData('E', 2, "  C   C")]
     //[InlineData('E', 1, " D     D")]

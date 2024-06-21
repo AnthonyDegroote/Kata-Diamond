@@ -77,6 +77,11 @@ internal static class Diamond
                 numberSpaceMiddle = 1;
                 numberSpaceFirst = 3;
             }
+            else if (printLetter == 'A')
+            {
+                numberSpaceMiddle = 0;
+                numberSpaceFirst = 4;
+            }
         }
         else if (v == 'F')
         {
@@ -102,6 +107,10 @@ internal static class Diamond
             numberSpaceFirst = 0;
         }
 
+        if (numberSpaceMiddle == 0)
+        {
+            return $"{PrintSpace(numberSpaceFirst)}{printLetter}";
+        }
         return $"{PrintSpace(numberSpaceFirst)}{printLetter}{PrintSpace(numberSpaceMiddle)}{printLetter}";
     }
 
