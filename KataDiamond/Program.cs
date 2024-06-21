@@ -1,7 +1,7 @@
 ﻿
 using KataDiamond;
 
-for (char c = 'A'; c < 'Z'; c++)
+for (char c = 'A'; c <= 'Z'; c++)
 {
     Console.WriteLine(Diamond.Print(c));
     Thread.Sleep(5000);
