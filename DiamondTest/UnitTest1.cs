@@ -22,6 +22,21 @@ public class UnitTest1
         Assert.Equal(exceptedLineMax, lines[(lines.Length/2)-1]);
     }
 
+    [Theory(DisplayName = "TestLineMiddleIndexTwo")]
+    // Arrange
+    [InlineData('E', 2, "  C     C")] // EDCBABCDE
+    public void TestLineMiddleIndexTwo(char c, uint indexOfMiddle, string exceptedLineMax)
+    {
+        // Act
+        string actual = Diamond.Print(c);
+
+        // Assert
+        var lines = actual.Split(Environment.NewLine)
+            .Where(line => !string.IsNullOrEmpty(line))
+            .ToArray();
+        Assert.Equal(exceptedLineMax, lines[(lines.Length / 2) - indexOfMiddle]);
+    }
+
     [Theory(DisplayName = "TestLineCount")]
     // Arrange
     [InlineData('A', 1)]
@@ -57,7 +72,10 @@ public class UnitTest1
         string actual = Diamond.Print(c);
 
         // Assert
-        var lines = actual.Split(Environment.NewLine);
+        var lines = actual
+            .Split(Environment.NewLine)
+            .Select(line => line.Trim())
+            .ToArray();
         Assert.Equal(exceptedLineMax, lines.MaxBy(line => line.Length));
     }
 

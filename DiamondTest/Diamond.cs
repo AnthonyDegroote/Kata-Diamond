@@ -61,25 +61,32 @@ internal static class Diamond
     {
         char printLetter = (char)('A' + i);
 
-        uint numberSpace;
+        uint numberSpaceMiddle = 0;
+        uint numberSpaceFirst = 1;
+
         if (v == 'E')
         {
-            numberSpace = 5;
+            numberSpaceMiddle = 5;
+            if (printLetter == 'C')
+            {
+                numberSpaceFirst = 2;
+            }
         }
         else if (v == 'F')
         {
-            numberSpace = 7;
+            numberSpaceMiddle = 7;
         }
         else if (v == 'G')
         {
-            numberSpace = 9;
+            numberSpaceMiddle = 9;
         }
         else
         {
-            numberSpace = 0;
+            numberSpaceMiddle = 0;
+            numberSpaceFirst = 0;
         }
 
-        return $"{PrintSpace(1)}{printLetter}{PrintSpace(numberSpace)}{printLetter}";
+        return $"{PrintSpace(numberSpaceFirst)}{printLetter}{PrintSpace(numberSpaceMiddle)}{printLetter}";
     }
 
     private static string PrintSpace(uint numberSpace)
