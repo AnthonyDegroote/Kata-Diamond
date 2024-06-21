@@ -19,6 +19,7 @@ public class UnitTest1
     [InlineData('E', 2, "  C   C")]
     [InlineData('E', 1, " D     D")]
     // FEDCBABCDEF
+    [InlineData('F', 5, "     A")]
     [InlineData('F', 4, "    B B")]
     [InlineData('F', 3, "   C   C")]
     [InlineData('F', 2, "  D     D")]

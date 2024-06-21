@@ -101,6 +101,11 @@ internal static class Diamond
                 numberSpaceMiddle = 1;
                 numberSpaceFirst = 4;
             }
+            else if (printLetter == 'A')
+            {
+                numberSpaceMiddle = 0;
+                numberSpaceFirst = 5;
+            }
         }
         else if (v == 'G')
         {
