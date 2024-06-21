@@ -30,12 +30,12 @@ public static class Diamond
         return stringBuilder.ToString();
     }
 
-    private static string NewMethod(char v, int i)
+    private static string NewMethod(char letter, int i)
     {
         char printLetter = (char)('A' + i);
 
-        uint numberSpaceMiddle = NumberSpaceMiddle(printLetter);
-        uint numberSpaceFirst = (uint)(v - printLetter);
+        ushort numberSpaceMiddle = NumberSpaceMiddle(printLetter);
+        ushort numberSpaceFirst = (ushort)(letter - printLetter);
 
         if (numberSpaceMiddle == 0)
         {
@@ -44,9 +44,9 @@ public static class Diamond
         return $"{PrintSpace(numberSpaceFirst)}{printLetter}{PrintSpace(numberSpaceMiddle)}{printLetter}";
     }
 
-    private static uint NumberSpaceMiddle(char printLetter)
+    private static ushort NumberSpaceMiddle(char printLetter)
     {
-        uint numberSpaceMiddle = 0;
+        ushort numberSpaceMiddle = 0;
         if (printLetter >= 'B')
         {
             numberSpaceMiddle = 1;
