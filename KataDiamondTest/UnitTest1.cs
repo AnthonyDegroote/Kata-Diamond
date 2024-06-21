@@ -8,27 +8,37 @@ public class UnitTest1
     // Arrange
     // BAB
     [InlineData('B', 1, " A")]
+    [InlineData('B', 0, "B B")]
     // CBABC
     [InlineData('C', 2, "  A")]
     [InlineData('C', 1, " B B")]
+    [InlineData('C', 0, "C   C")]
     // DCBACBD
     [InlineData('D', 3, "   A")]
     [InlineData('D', 2, "  B B")]
     [InlineData('D', 1, " C   C")]
+    [InlineData('D', 0, "D     D")]
     // EDCBABCDE
     [InlineData('E', 4, "    A")]
     [InlineData('E', 3, "   B B")]
     [InlineData('E', 2, "  C   C")]
     [InlineData('E', 1, " D     D")]
+    [InlineData('E', 0, "E       E")]
     // FEDCBABCDEF
     [InlineData('F', 5, "     A")]
     [InlineData('F', 4, "    B B")]
     [InlineData('F', 3, "   C   C")]
     [InlineData('F', 2, "  D     D")]
     [InlineData('F', 1, " E       E")]
+    [InlineData('F', 0, "F         F")]
     // GFEDCBABCDEFG
+    [InlineData('G', 6, "      A")]
+    [InlineData('G', 5, "     B B")]
+    [InlineData('G', 4, "    C   C")]
+    [InlineData('G', 3, "   D     D")]
     [InlineData('G', 2, "  E       E")]
     [InlineData('G', 1, " F         F")]
+    [InlineData('G', 0, "G           G")]
     public void TestLineMiddleIndex(char c, uint indexOfMiddle, string exceptedLineMax)
     {
         // Act
