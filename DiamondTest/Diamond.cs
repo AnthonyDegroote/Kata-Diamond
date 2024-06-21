@@ -77,15 +77,20 @@ internal static class Diamond
             numberSpace = 0;
         }
 
-        StringBuilder builder = new();
-        for(uint j = 0; j < numberSpace; j++)
-        {
-            builder.Append(" ");
-        }
-        string space = builder.ToString();
-
+        string space = PrintSpace(numberSpace);
 
         stringBuilder.AppendLine($" {(char)('A' + i)}{space}{(char)('A' + i)}");
+    }
+
+    private static string PrintSpace(uint numberSpace)
+    {
+        StringBuilder stringBuilder = new();
+        for (uint j = 0; j < numberSpace; j++)
+        {
+            stringBuilder.Append(" ");
+        }
+        string space = stringBuilder.ToString();
+        return space;
     }
 
     private static void PrintMiddleLine(char v, StringBuilder stringBuilder)
