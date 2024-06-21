@@ -82,13 +82,13 @@ internal static class Diamond
 
     private static string PrintSpace(uint numberSpace)
     {
+        const char space = ' ';
         StringBuilder stringBuilder = new();
         for (uint j = 0; j < numberSpace; j++)
         {
-            stringBuilder.Append(" ");
+            stringBuilder.Append(space);
         }
-        string space = stringBuilder.ToString();
-        return space;
+        return stringBuilder.ToString();
     }
 
     private static void PrintMiddleLine(char v, StringBuilder stringBuilder)
