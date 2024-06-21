@@ -2,38 +2,29 @@ namespace DiamondTest;
 
 public class UnitTest1
 {
-    [Theory(DisplayName = "TestLineMiddleIndexOne")]
+    [Theory(DisplayName = "TestLineMiddleIndex")]
     // Arrange
-    [InlineData('B', " A")]
-    [InlineData('C', " B B")]
-    [InlineData('D', " C   C")]
-    [InlineData('E', " D     D")]
-    [InlineData('F', " E       E")]
-    [InlineData('G', " F         F")]
-    public void TestLineMiddleIndexOne(char c, string exceptedLineMax)
-    {
-        // Act
-        string actual = Diamond.Print(c);
-
-        // Assert
-        var lines = actual.Split(Environment.NewLine)
-            .Where(line => !string.IsNullOrEmpty(line))
-            .ToArray();
-        Assert.Equal(exceptedLineMax, lines[(lines.Length/2)-1]);
-    }
-
-    [Theory(DisplayName = "TestLineMiddleIndexTwo")]
-    // Arrange
+    // BAB
+    [InlineData('B', 1, " A")]
+    // CBABC
+    [InlineData('C', 2, "  A")]
+    [InlineData('C', 1, " B B")]
+    // DCBACBD
+    [InlineData('D', 3, "   A")]
+    [InlineData('D', 2, "  B B")]
+    [InlineData('D', 1, " C   C")]
     // EDCBABCDE
     [InlineData('E', 4, "    A")]
     [InlineData('E', 3, "   B B")]
     [InlineData('E', 2, "  C   C")]
-    //[InlineData('E', 1, " D     D")]
+    [InlineData('E', 1, " D     D")]
     // FEDCBABCDEF
     [InlineData('F', 2, "  D     D")]
+    [InlineData('F', 1, " E       E")]
     // GFEDCBABCDEFG
     [InlineData('G', 2, "  E       E")]
-    public void TestLineMiddleIndexTwo(char c, uint indexOfMiddle, string exceptedLineMax)
+    [InlineData('G', 1, " F         F")]
+    public void TestLineMiddleIndex(char c, uint indexOfMiddle, string exceptedLineMax)
     {
         // Act
         string actual = Diamond.Print(c);
