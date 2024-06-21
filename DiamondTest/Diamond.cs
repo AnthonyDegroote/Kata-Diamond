@@ -44,20 +44,20 @@ internal static class Diamond
 
         for (int i = 0; i < (v - 'A'); i++)
         {
-            NewMethod(v, stringBuilder, i);
+            stringBuilder.AppendLine(NewMethod(v, i));
         }
 
         PrintMiddleLine(v, stringBuilder);
 
         for (int i = (v - 'A'); i > 0; i--)
         {
-            NewMethod(v, stringBuilder, i);
+            stringBuilder.AppendLine(NewMethod(v, i));
         }
 
         return stringBuilder.ToString();
     }
 
-    private static void NewMethod(char v, StringBuilder stringBuilder, int i)
+    private static string NewMethod(char v, int i)
     {
         char printLetter = (char)('A' + i);
 
@@ -79,7 +79,7 @@ internal static class Diamond
             numberSpace = 0;
         }
 
-        stringBuilder.AppendLine($"{PrintSpace(1)}{printLetter}{PrintSpace(numberSpace)}{printLetter}");
+        return $"{PrintSpace(1)}{printLetter}{PrintSpace(numberSpace)}{printLetter}";
     }
 
     private static string PrintSpace(uint numberSpace)
