@@ -46,9 +46,7 @@ public static class Diamond
             stringBuilder.AppendLine(NewMethod(v, i));
         }
 
-        PrintMiddleLine(v, stringBuilder);
-
-        for (int i = (v - 'A'); i > 0; i--)
+        for (int i = (v - 'A'); i >= 0; i--)
         {
             stringBuilder.AppendLine(NewMethod(v, i));
         }
