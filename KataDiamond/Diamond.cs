@@ -6,31 +6,31 @@ public static class Diamond
 {
     public static string Print(char letter)
     {
-        char maxLetter = (char)(letter - 'A');
+        ushort maxLetter = (char)(letter - 'A');
 
         StringBuilder stringBuilder = new();
 
         for (int i = 0; i < maxLetter; i++)
         {
-            stringBuilder.AppendLine(NewMethod(letter, i));
+            stringBuilder.AppendLine(PrintLine(letter, i));
         }
 
         for (int i = maxLetter; i >= 0; i--)
         {
             if (i == 0)
             {
-                stringBuilder.Append(NewMethod(letter, i));
+                stringBuilder.Append(PrintLine(letter, i));
             }
             else
             {
-                stringBuilder.AppendLine(NewMethod(letter, i));
+                stringBuilder.AppendLine(PrintLine(letter, i));
             }
         }
 
         return stringBuilder.ToString();
     }
 
-    private static string NewMethod(char letter, int i)
+    private static string PrintLine(char letter, int i)
     {
         char printLetter = (char)('A' + i);
 
