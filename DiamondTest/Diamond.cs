@@ -69,6 +69,7 @@ internal static class Diamond
             numberSpaceMiddle = 5;
             if (printLetter == 'C')
             {
+                numberSpaceMiddle = 3;
                 numberSpaceFirst = 2;
             }
         }
@@ -77,6 +78,7 @@ internal static class Diamond
             numberSpaceMiddle = 7;
             if (printLetter == 'D')
             {
+                numberSpaceMiddle = 5;
                 numberSpaceFirst = 2;
             }
         }
@@ -85,6 +87,7 @@ internal static class Diamond
             numberSpaceMiddle = 9;
             if (printLetter == 'E')
             {
+                numberSpaceMiddle = 7;
                 numberSpaceFirst = 2;
             }
         }

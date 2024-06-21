@@ -27,6 +27,12 @@ public class UnitTest1
     [InlineData('E', 2,   "  C     C")]       // EDCBABCDE
     [InlineData('F', 2,  "  D       D")]     // FEDCBABCDEF
     [InlineData('G', 2, "  E         E")]   // GFEDCBABCDEFG
+    [InlineData('E', 2, "  C   C")]
+    //[InlineData('E', 1, " D     D")]
+    // FEDCBABCDEF
+    [InlineData('F', 2, "  D     D")]
+    // GFEDCBABCDEFG
+    [InlineData('G', 2, "  E       E")]
     public void TestLineMiddleIndexTwo(char c, uint indexOfMiddle, string exceptedLineMax)
     {
         // Act
