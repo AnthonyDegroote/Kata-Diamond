@@ -61,32 +61,7 @@ internal static class Diamond
     {
         char printLetter = (char)('A' + i);
 
-        uint numberSpaceMiddle = 0;
-
-        if (printLetter == 'F')
-        {
-            numberSpaceMiddle = 9;
-        }
-        else if(printLetter == 'E')
-        {
-            numberSpaceMiddle = 7;
-        }
-        else if (printLetter == 'D')
-        {
-            numberSpaceMiddle = 5;
-        }
-        else if (printLetter == 'C')
-        {
-            numberSpaceMiddle = 3;
-        }
-        else if (printLetter == 'B')
-        {
-            numberSpaceMiddle = 1;
-        }
-        else if (printLetter == 'A')
-        {
-            numberSpaceMiddle = 0;
-        }
+        uint numberSpaceMiddle = NumberSpaceMiddle(printLetter);
 
         uint numberSpaceFirst = 1;
 
@@ -149,6 +124,38 @@ internal static class Diamond
             return $"{PrintSpace(numberSpaceFirst)}{printLetter}";
         }
         return $"{PrintSpace(numberSpaceFirst)}{printLetter}{PrintSpace(numberSpaceMiddle)}{printLetter}";
+    }
+
+    private static uint NumberSpaceMiddle(char printLetter)
+    {
+        uint numberSpaceMiddle = 0;
+
+        if (printLetter == 'F')
+        {
+            numberSpaceMiddle = 9;
+        }
+        else if (printLetter == 'E')
+        {
+            numberSpaceMiddle = 7;
+        }
+        else if (printLetter == 'D')
+        {
+            numberSpaceMiddle = 5;
+        }
+        else if (printLetter == 'C')
+        {
+            numberSpaceMiddle = 3;
+        }
+        else if (printLetter == 'B')
+        {
+            numberSpaceMiddle = 1;
+        }
+        else if (printLetter == 'A')
+        {
+            numberSpaceMiddle = 0;
+        }
+
+        return numberSpaceMiddle;
     }
 
     private static string PrintSpace(uint numberSpace)
