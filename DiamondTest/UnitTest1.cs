@@ -2,7 +2,7 @@ namespace DiamondTest;
 
 public class UnitTest1
 {
-    [Theory(DisplayName = "TestLineMiddleIndex")]
+    [Theory(DisplayName = "TestLineMiddleIndexOne")]
     // Arrange
     [InlineData('B', " A")]
     [InlineData('C', " B B")]
@@ -10,7 +10,7 @@ public class UnitTest1
     [InlineData('E', " D     D")]
     [InlineData('F', " E       E")]
     [InlineData('G', " F         F")]
-    public void TestLineMiddleIndex(char c, string exceptedLineMax)
+    public void TestLineMiddleIndexOne(char c, string exceptedLineMax)
     {
         // Act
         string actual = Diamond.Print(c);
