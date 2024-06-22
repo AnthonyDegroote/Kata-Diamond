@@ -15,17 +15,12 @@ public static class Diamond
             stringBuilder.AppendLine(PrintLine(letter, i));
         }
 
-        for (int i = maxLetter; i >= 0; i--)
+        for (int i = maxLetter; i > 0; i--)
         {
-            if (i == 0)
-            {
-                stringBuilder.Append(PrintLine(letter, i));
-            }
-            else
-            {
-                stringBuilder.AppendLine(PrintLine(letter, i));
-            }
+            stringBuilder.AppendLine(PrintLine(letter, i));
         }
+
+        stringBuilder.Append(PrintLine(letter, 0));
 
         return stringBuilder.ToString();
     }
